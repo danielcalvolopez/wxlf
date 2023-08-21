@@ -10,8 +10,10 @@
 }
 
 body {
+  background-color: black;
   --yellow: #fff500;
   --black-transparent: #00000021;
+  color: white;
 }
 
 h1 {

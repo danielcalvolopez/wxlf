@@ -1,0 +1,58 @@
+.main-content {
+  height: 100vh;
+}
+
+.home {
+  background-image: url(assets/backgrounds/desktop/home.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 390px) {
+    background-image: url(assets/backgrounds/mobile/home.png);
+  }
+}
+
+.about {
+  background-image: url(assets/backgrounds/desktop/about.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 390px) {
+    background-image: url(assets/backgrounds/mobile/about.png);
+  }
+}
+
+.artists {
+  background-image: url(assets/backgrounds/desktop/artists.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 390px) {
+    background-image: url(assets/backgrounds/mobile/artists.png);
+  }
+}
+
+.artist {
+  background-image: url(assets/backgrounds/desktop/artist.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 390px) {
+    background-image: url(assets/backgrounds/mobile/artist.png);
+  }
+}
+
+.get-in-touch {
+  background-image: url(assets/backgrounds/desktop/get-in-touch.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 390px) {
+    background-image: url(assets/backgrounds/mobile/get-in-touch.png);
+  }
+}

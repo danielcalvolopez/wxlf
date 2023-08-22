@@ -20,10 +20,10 @@ const LangSelector = () => {
           <div className="dropdown">
             <div className="option">
               <p className="option-text">ES</p>
-              <HiMiniCheck />
             </div>
             <div className="option">
               <p className="option-text">EN</p>
+              <HiMiniCheck />
             </div>
           </div>
         )}

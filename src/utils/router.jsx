@@ -10,6 +10,7 @@ import AboutUs from "../pages/AboutUs";
 import Artists from "../pages/Artists";
 import Artist from "../pages/Artist";
 import GetInTouch from "../pages/GetInTouch";
+import NotFound from "../pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
         <Route path="artists/:artist" element={<Artist />} />
         <Route path="get-in-touch" element={<GetInTouch />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );

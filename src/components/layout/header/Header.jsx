@@ -9,22 +9,28 @@ const Header = () => {
       <img src="/main-logo.png" alt="" />
       <nav className="nav-menu">
         <NavLink
-          className={({ isActive }) => (isActive ? "current-path" : "")}
+          className={({ isActive }) =>
+            isActive ? "current-path nav-item" : "nav-item"
+          }
           to="/"
         >
-          Home
+          <span dataText="home">Home</span>
         </NavLink>
         <NavLink
-          className={({ isActive }) => (isActive ? "current-path" : "")}
+          className={({ isActive }) =>
+            isActive ? "current-path nav-item" : "nav-item"
+          }
           to="about-us"
         >
-          About Us
+          <span dataText="about us">About Us</span>
         </NavLink>
         <NavLink
-          className={({ isActive }) => (isActive ? "current-path" : "")}
+          className={({ isActive }) =>
+            isActive ? "current-path nav-item" : "nav-item"
+          }
           to="artists"
         >
-          Artists
+          <span dataText="artists">Artists</span>
         </NavLink>
 
         <LangSelector />

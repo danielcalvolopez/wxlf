@@ -5,11 +5,12 @@
   padding: 0;
   margin: 0;
 
-  font-family: "DM Sans", sans-serif;
+  /* font-family: "DM Sans", sans-serif; */
   /* font-family: "Roboto Mono", monospace; */
 }
 
 body {
+  font-family: "DM Sans", sans-serif;
   background-color: black;
   --yellow: #fff500;
   --black-transparent: #00000094;

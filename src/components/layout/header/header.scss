@@ -10,10 +10,33 @@
 
   .nav-menu {
     display: flex;
+    align-items: center;
     gap: 40px;
     font-size: 17px;
     text-transform: uppercase;
     user-select: none;
+
+    .nav-item {
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+      height: 30px;
+
+      span {
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+
+        &::before {
+          content: attr(dataText);
+          position: absolute;
+          transform: translateY(100%);
+        }
+
+        &:hover {
+          transform: translateY(-100%);
+        }
+      }
+    }
 
     .current-path {
       color: var(--yellow);

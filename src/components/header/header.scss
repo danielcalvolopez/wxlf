@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,700&family=Roboto+Mono:wght@200;400;700&display=swap");
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 90px;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 40px;
+    font-size: 17px;
+    text-transform: uppercase;
+    user-select: none;
+
+    .current-path {
+      color: var(--yellow);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      font-family: "Roboto Mono", monospace;
+      cursor: pointer;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+}

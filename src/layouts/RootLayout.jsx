@@ -10,14 +10,16 @@ const RootLayout = () => {
     <div
       className={`main-content 
     ${currentPath === "" && "home"}
-    ${currentPath === "about-us" && "about-us"}
+    ${currentPath === "about-us" && "about"}
     ${currentPath === "artists" && "artists"}
     ${currentPath === "get-in-touch" && "get-in-touch"}
     ${currentPath.length >= 12 && "artist"}
     `}
     >
-      <Header />
-      <Outlet />
+      <div className="main-content-wrapper">
+        <Header />
+        <Outlet />
+      </div>
     </div>
   );
 };

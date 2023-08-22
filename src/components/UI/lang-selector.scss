@@ -1,0 +1,57 @@
+.lang-wrapper {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+
+  .lang {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    padding: 7px 14px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffff0021;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: -9%;
+    color: black;
+    background-color: var(--yellow);
+    padding: 10px 20px;
+    color: var(--black-transparent);
+    z-index: 4;
+
+    .option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+
+      .option-text {
+        &:hover {
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.backdrop {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.426);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}

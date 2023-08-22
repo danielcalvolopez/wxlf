@@ -1,0 +1,72 @@
+.button-wrapper {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 14px;
+  gap: 9px;
+  border-radius: 50px;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    background-color: #ffff0021;
+  }
+
+  &:hover > .arrow {
+    transform: translateX(5px);
+  }
+  &:hover > button {
+    cursor: pointer;
+  }
+
+  .arrow {
+    color: var(--yellow);
+    transition: all 0.3s ease-in-out;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+}
+
+.yellow {
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 14px;
+  gap: 9px;
+  border-radius: 50px;
+  z-index: 8;
+  cursor: pointer;
+
+  &:hover > .arrow {
+    transform: translateX(5px);
+  }
+  &:hover > button {
+    cursor: pointer;
+  }
+
+  .arrow {
+    color: var(--yellow);
+    transition: all 0.3s ease-in-out;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--yellow);
+    font-family: "Roboto Mono", monospace;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+}

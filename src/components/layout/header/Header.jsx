@@ -2,8 +2,15 @@ import { NavLink } from "react-router-dom";
 import "./header.scss";
 import Button from "../../UI/Button";
 import LangSelector from "../../UI/LangSelector";
+import MobileMenu from "../mobile/MobileMenu";
+import { useState } from "react";
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggleMenu = () => {
+    setToggle((prev) => !prev);
+  };
   return (
     <div className="header-container">
       <img src="/main-logo.png" alt="" />
@@ -42,6 +49,15 @@ const Header = () => {
           <Button>get in touch</Button>
         </NavLink>
       </nav>
+
+      <img
+        onClick={handleToggleMenu}
+        className="burger-menu"
+        src="/burger.png"
+        alt=""
+      />
+
+      {toggle && <MobileMenu handleToggleMenu={handleToggleMenu} />}
     </div>
   );
 };

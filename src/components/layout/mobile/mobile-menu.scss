@@ -1,0 +1,33 @@
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px;
+  background-color: var(--yellow);
+  color: var(--black-transparent);
+  z-index: 5;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .menu-item {
+      display: flex;
+      gap: 10px;
+      text-transform: uppercase;
+      font-family: "Roboto Mono", monospace;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .close {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+    .icon {
+      width: 20px;
+    }
+  }
+}

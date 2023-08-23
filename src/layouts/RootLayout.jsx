@@ -14,7 +14,7 @@ const RootLayout = () => {
     ${currentPath === "about-us" ? "about" : ""}
     ${currentPath === "artists" ? "artists" : ""}
     ${currentPath === "get-in-touch" ? "get-in-touch" : ""}
-    ${currentPath.length >= 12 ? "artist" : ""}
+    ${currentPath.length >= 12 ? "artist" : "artists"}
     `}
     >
       <div className="main-content-wrapper">

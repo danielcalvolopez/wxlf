@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./lang-selector.scss";
 import { HiChevronDown, HiMiniCheck } from "react-icons/hi2";
+import Backdrop from "./Backdrop";
 
 const LangSelector = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,7 +11,7 @@ const LangSelector = () => {
   };
   return (
     <>
-      {toggle && <div onClick={handleLanguageModal} className="backdrop" />}
+      {toggle && <Backdrop onClick={handleLanguageModal} />}
       <div className="lang-wrapper">
         <div onClick={handleLanguageModal} className="lang">
           <span>EN</span>

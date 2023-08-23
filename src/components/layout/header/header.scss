@@ -8,6 +8,15 @@
     width: 90px;
   }
 
+  .burger-menu {
+    width: 30px;
+    display: none;
+
+    @media only screen and (max-width: 900px) {
+      display: block;
+    }
+  }
+
   .nav-menu {
     display: flex;
     align-items: center;
@@ -15,6 +24,10 @@
     font-size: 17px;
     text-transform: uppercase;
     user-select: none;
+
+    @media only screen and (max-width: 900px) {
+      display: none;
+    }
 
     .nav-item {
       overflow: hidden;

@@ -23,8 +23,9 @@ const LangSelector = () => {
               <p className="option-text">ES</p>
             </div>
             <div className="option">
-              <p className="option-text">EN</p>
-              <HiMiniCheck />
+              <p className="option-text">
+                EN <HiMiniCheck className="check" />
+              </p>
             </div>
           </div>
         )}

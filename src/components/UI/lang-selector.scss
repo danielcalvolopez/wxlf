@@ -13,6 +13,7 @@
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    font-family: "Roboto Mono", monospace;
 
     &:hover {
       background-color: #ffff0021;
@@ -28,17 +29,26 @@
     padding: 10px 20px;
     color: var(--black-transparent);
     z-index: 4;
+    border-radius: 20px;
 
     .option {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 6px;
+      font-family: "Roboto Mono", monospace;
+
+      .check {
+        color: black;
+      }
 
       .option-text {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
         &:hover {
           color: black;
-          cursor: pointer;
         }
       }
     }

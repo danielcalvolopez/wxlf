@@ -14,11 +14,76 @@
 
     .menu-item {
       display: flex;
-      gap: 10px;
       text-transform: uppercase;
       font-family: "Roboto Mono", monospace;
       font-size: 24px;
       cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .language {
+      display: flex;
+      text-transform: uppercase;
+      flex-direction: column;
+      justify-content: start;
+      width: fit-content;
+      margin-top: 15px;
+      cursor: pointer;
+      user-select: none;
+
+      font-family: "Roboto Mono", monospace;
+
+      .options {
+        font-size: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.104);
+        border-top: none;
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .check {
+          color: black;
+        }
+
+        p:hover {
+          color: black;
+        }
+      }
+      .language-button {
+        width: fit-content;
+        align-items: center;
+        padding: 10px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.104);
+        display: flex;
+        gap: 10px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: black;
+        }
+
+        p {
+          font-size: 17px;
+        }
+
+        span {
+          display: flex;
+        }
+      }
     }
   }
 
@@ -26,8 +91,10 @@
     display: flex;
     justify-content: end;
     margin-bottom: 30px;
+
     .icon {
       width: 20px;
+      cursor: pointer;
     }
   }
 }

@@ -7,6 +7,7 @@
   background-color: var(--yellow);
   color: var(--black-transparent);
   z-index: 5;
+  user-select: none;
   .menu {
     display: flex;
     flex-direction: column;
@@ -33,14 +34,12 @@
       width: fit-content;
       margin-top: 15px;
       cursor: pointer;
-      user-select: none;
 
       font-family: "Roboto Mono", monospace;
 
       .options {
         font-size: 14px;
-        border: 1px solid rgba(0, 0, 0, 0.104);
-        border-top: none;
+
         width: 100%;
         padding: 15px;
         display: flex;
@@ -66,10 +65,8 @@
       .language-button {
         width: fit-content;
         align-items: center;
-        padding: 10px 15px;
-        border: 1px solid rgba(0, 0, 0, 0.104);
         display: flex;
-        gap: 10px;
+        gap: 5px;
         transition: all 0.2s ease-in-out;
 
         &:hover {

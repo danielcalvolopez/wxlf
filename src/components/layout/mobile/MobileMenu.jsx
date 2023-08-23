@@ -45,7 +45,7 @@ const MobileMenu = ({ handleToggleMenu }) => {
 
           <div className="language">
             <div onClick={handleAccordion} className="language-button">
-              <p>Language</p>
+              <p>en</p>
               <span>
                 {isActive ? (
                   <HiChevronUp size={17} />

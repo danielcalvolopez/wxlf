@@ -4,6 +4,7 @@
   justify-content: start;
   text-transform: uppercase;
   color: var(--yellow);
+  user-select: none;
 
   .bar {
     height: 1px;

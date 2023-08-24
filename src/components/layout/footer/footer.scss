@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 10px;
   font-family: "Roboto Mono", monospace;
+  user-select: none;
 
   .signature {
     text-align: center;

@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Roboto Mono", monospace;
+
+  .signature {
+    text-align: center;
+    color: var(--yellow);
+    font-weight: 100;
+    margin-top: 20px;
+    span {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  .bar {
+    height: 1px;
+    background-color: var(--yellow);
+  }
+
+  .sub-text {
+    color: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      font-size: 12px;
+    }
+  }
+}

@@ -21,7 +21,7 @@ const Header = () => {
           }
           to="/"
         >
-          <span dataText="home">Home</span>
+          <span datatext="home">Home</span>
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -29,7 +29,7 @@ const Header = () => {
           }
           to="about-us"
         >
-          <span dataText="about us">About Us</span>
+          <span datatext="about us">About Us</span>
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -37,7 +37,7 @@ const Header = () => {
           }
           to="artists"
         >
-          <span dataText="artists">Artists</span>
+          <span datatext="artists">Artists</span>
         </NavLink>
 
         <LangSelector />

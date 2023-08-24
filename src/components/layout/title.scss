@@ -1,0 +1,12 @@
+.layout-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-transform: uppercase;
+  color: var(--yellow);
+
+  .bar {
+    height: 1px;
+    background-color: var(--yellow);
+  }
+}

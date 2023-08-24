@@ -1,11 +1,33 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../components/layout/footer/Footer";
 import Title from "../components/layout/Title";
+import { useEffect, useState } from "react";
 
 const PagesLayout = () => {
+  const location = useLocation();
+
+  const [currentPath, setCurrentPath] = useState(undefined);
+
+  const getCurrentPath = () => {
+    if (location.pathname === "/about-us") {
+      setCurrentPath("about us");
+    }
+    if (location.pathname === "/artists") {
+      setCurrentPath("artists");
+    }
+    if (location.pathname === "/get-in-touch") {
+      setCurrentPath("get in touch");
+    }
+    return;
+  };
+
+  useEffect(() => {
+    getCurrentPath();
+  }, [location.pathname]);
+
   return (
     <>
-      <Title />
+      <Title title={currentPath} />
       <Outlet />
       <Footer />
     </>

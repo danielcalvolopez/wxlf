@@ -1,0 +1,59 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    font-family: "DM Sans", sans-serif;
+
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      order: 2;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+    span {
+      color: var(--yellow);
+    }
+    h2 {
+      text-transform: uppercase;
+      font-weight: 300;
+      width: 80%;
+      line-height: 113.5%;
+      @media only screen and (max-width: 1200px) {
+        width: 80%;
+        font-size: 55px;
+      }
+      @media only screen and (max-width: 900px) {
+        font-size: 40px;
+        width: 100%;
+      }
+    }
+
+    p {
+      font-family: "Roboto Mono", monospace;
+      width: 55%;
+      @media only screen and (max-width: 900px) {
+      }
+    }
+  }
+
+  .hero-image {
+    width: 50%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      order: 1;
+    }
+  }
+}

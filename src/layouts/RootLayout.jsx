@@ -8,15 +8,7 @@ const RootLayout = () => {
   const currentPath = location.pathname.slice(1);
 
   return (
-    <div
-      className={`main-content 
-    ${currentPath === "" ? "home" : ""}
-    ${currentPath === "about-us" ? "about" : ""}
-    ${currentPath === "artists" ? "artists" : ""}
-    ${currentPath === "get-in-touch" ? "get-in-touch" : ""}
-    ${currentPath.length >= 12 ? "artist" : "artists"}
-    `}
-    >
+    <div className={`main-content `}>
       <div className="main-content-wrapper">
         <Header />
         <Outlet />

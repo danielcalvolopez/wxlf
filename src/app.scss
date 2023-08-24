@@ -36,13 +36,13 @@
 }
 
 .artist {
-  background-image: url(assets/backgrounds/desktop/artist.png);
+  background-image: url(assets/backgrounds/desktop/home.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media only screen and (max-width: 390px) {
-    background-image: url(assets/backgrounds/mobile/artist.png);
+    background-image: url(assets/backgrounds/mobile/home.png);
   }
 }
 

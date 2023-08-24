@@ -1,9 +1,10 @@
 import HorizontalBars from "../components/designShapes/HorizontalBars";
 import Hero from "../components/home/Hero";
+import "./home.scss";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-page">
       <Hero />
       <HorizontalBars />
     </div>

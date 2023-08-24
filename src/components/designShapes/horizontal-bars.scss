@@ -1,0 +1,40 @@
+.bars {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 45px;
+
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
+
+  .bar1 {
+    background-color: rgba(255, 255, 0, 0.345);
+    height: 1px;
+  }
+
+  .bar2 {
+    background-color: rgba(255, 255, 0, 0.264);
+    height: 4px;
+  }
+
+  .bar3 {
+    background-color: rgba(255, 255, 0, 0.264);
+    height: 9px;
+  }
+
+  .bar4 {
+    background-color: rgba(255, 255, 0, 0.264);
+    height: 16px;
+  }
+
+  .bar5 {
+    background-color: rgba(255, 255, 0, 0.264);
+    height: 23px;
+  }
+
+  .bar6 {
+    background-color: rgba(255, 255, 0, 0.264);
+    height: 34px;
+  }
+}

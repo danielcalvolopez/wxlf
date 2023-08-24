@@ -1,0 +1,27 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  color: var(--yellow);
+  padding-top: 100px;
+  @media only screen and (max-width: 650px) {
+    padding-top: 150px;
+  }
+
+  .error-code {
+    font-size: 150px;
+    @media only screen and (max-width: 650px) {
+      font-size: 110px;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+    @media only screen and (max-width: 650px) {
+      font-size: 30px;
+    }
+  }
+}

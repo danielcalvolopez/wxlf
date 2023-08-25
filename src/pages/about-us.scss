@@ -1,0 +1,18 @@
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto Mono", monospace;
+  .about-us-img {
+    width: 50%;
+  }
+
+  .about-us-text {
+    padding: 100px;
+    width: 50%;
+    font-size: 30px;
+
+    span {
+      color: var(--yellow);
+    }
+  }
+}

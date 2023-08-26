@@ -1,0 +1,35 @@
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  gap: 10px;
+  cursor: pointer;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--yellow);
+    letter-spacing: 4px;
+    font-weight: 100;
+    font-size: 18px;
+
+    .arrow-button {
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid var(--yellow);
+      border-radius: 50%;
+    }
+  }
+
+  .info {
+    font-family: "Roboto Mono", monospace;
+    color: #d1d1d1;
+    font-size: 15px;
+    line-height: 147%;
+  }
+}

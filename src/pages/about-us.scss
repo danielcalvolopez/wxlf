@@ -2,8 +2,26 @@
   display: flex;
   justify-content: space-between;
   font-family: "Roboto Mono", monospace;
-  .about-us-img {
+
+  .image-wrapper {
     width: 50%;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: var(--yellow);
+    }
+    .about-us-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.7s ease-in;
+      z-index: -1;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 
   .about-us-text {

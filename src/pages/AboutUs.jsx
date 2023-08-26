@@ -3,7 +3,9 @@ import "./about-us.scss";
 const AboutUs = () => {
   return (
     <div className="about-us">
-      <img className="about-us-img" src="/photos/about-us.jpg" alt="" />
+      <div className="image-wrapper">
+        <img className="about-us-img" src="/photos/about-us.jpg" alt="" />
+      </div>
       <p className="about-us-text">
         Minimalist tattoo studio based in <span> Murcia </span>(Spain). Our goal
         is to transform your tattoo idea into reality using the most advanced

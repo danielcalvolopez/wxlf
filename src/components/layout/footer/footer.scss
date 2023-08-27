@@ -12,6 +12,11 @@
     font-weight: 100;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 450px) {
+      margin-top: 0px;
+      font-size: 14px;
+    }
     span {
       &:hover {
         text-decoration: underline;
@@ -22,12 +27,19 @@
   .bar {
     height: 1px;
     background-color: var(--yellow);
+
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
   }
 
   .sub-text {
     color: var(--yellow);
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
 
     p {
       text-transform: uppercase;

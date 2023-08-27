@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 import "./hero.scss";
 
@@ -12,7 +13,9 @@ const Hero = () => {
           Discover the range of our residents, from minimalism to realism,
           passing through fine line, japanese and aesthetic.
         </p>
-        <Button>explore</Button>
+        <Link to="artists">
+          <Button>explore</Button>
+        </Link>
       </div>
 
       <img className="hero-image" src="/photos/home.jpg" alt="" />

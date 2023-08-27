@@ -7,8 +7,18 @@
   user-select: none;
   margin-bottom: 40px;
 
+  h1 {
+    @media only screen and (max-width: 800px) {
+      font-size: 60px;
+    }
+  }
+
   .bar {
     height: 1px;
     background-color: var(--yellow);
+
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
   }
 }

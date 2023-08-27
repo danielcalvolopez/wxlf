@@ -1,5 +1,13 @@
+import { useLocation } from "react-router-dom";
+
 const Artist = () => {
-  return <div>Artist</div>;
+  const location = useLocation();
+
+  const { name, gallery } = location.state;
+
+  console.log(gallery);
+
+  return <div>{name}</div>;
 };
 
 export default Artist;

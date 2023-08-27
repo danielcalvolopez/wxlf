@@ -18,6 +18,18 @@ const PagesLayout = () => {
     if (location.pathname === "/get-in-touch") {
       setCurrentPath("get in touch");
     }
+    if (location.pathname === "/artists/sophie-lee") {
+      setCurrentPath("sophie lee");
+    }
+    if (location.pathname === "/artists/pol") {
+      setCurrentPath("pol");
+    }
+    if (location.pathname === "/artists/carlos") {
+      setCurrentPath("carlos");
+    }
+    if (location.pathname === "/artists/fred") {
+      setCurrentPath("fred");
+    }
     return;
   };
 

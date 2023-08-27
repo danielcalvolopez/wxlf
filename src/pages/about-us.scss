@@ -2,11 +2,21 @@
   display: flex;
   justify-content: space-between;
   font-family: "Roboto Mono", monospace;
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 
   .image-wrapper {
     width: 50%;
     overflow: hidden;
     box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 400px) {
+      height: 300px;
+    }
 
     &:hover {
       background-color: var(--yellow);
@@ -28,6 +38,23 @@
     padding: 100px;
     width: 50%;
     font-size: 30px;
+
+    @media only screen and (max-width: 1200px) {
+      width: 100%;
+      padding: 50px;
+    }
+
+    @media only screen and (max-width: 800px) {
+      font-size: 24px;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 0;
+      font-size: 18px;
+      line-height: 150%;
+    }
 
     span {
       color: var(--yellow);

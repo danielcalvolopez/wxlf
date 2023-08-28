@@ -1,0 +1,17 @@
+.get-in-touch-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 1250px) {
+    justify-content: center;
+  }
+  .get-in-touch-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media only screen and (max-width: 1250px) {
+      flex-direction: column;
+    }
+  }
+}

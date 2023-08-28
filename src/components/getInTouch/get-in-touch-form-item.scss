@@ -1,0 +1,27 @@
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+
+  label {
+    color: var(--yellow);
+  }
+  input {
+    background-color: transparent;
+    border: 1px solid var(--yellow);
+    padding: 10px;
+    outline: none;
+    color: white;
+  }
+  textarea {
+    background-color: transparent;
+    border: 1px solid var(--yellow);
+    height: 200px;
+    padding: 10px;
+    outline: none;
+    color: white;
+    resize: none;
+  }
+}

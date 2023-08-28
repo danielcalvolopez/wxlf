@@ -3,10 +3,8 @@ import Header from "../components/layout/header/Header";
 import "./root-layout.scss";
 
 const RootLayout = () => {
-  const location = useLocation();
-
   return (
-    <div className={`main-content `}>
+    <div className="main-content">
       <div className="main-content-wrapper">
         <Header />
         <Outlet />

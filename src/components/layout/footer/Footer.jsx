@@ -9,7 +9,10 @@ const Footer = () => {
         <p>tattoo studio</p>
       </div>
       <p className="signature">
-        Designed & built by <span>Daniel Calvo</span>
+        Designed & built by{" "}
+        <a target="_blank" href="https://www.danielcalvolopez.com/">
+          Daniel Calvo
+        </a>
       </p>
     </div>
   );

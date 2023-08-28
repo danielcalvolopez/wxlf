@@ -1,13 +1,17 @@
 import { useLocation } from "react-router-dom";
+import ArtistGallery from "../components/artists/artist/ArtistGallery";
+import GalleryCtxProvider from "../context/galleryCtx";
 
 const Artist = () => {
   const location = useLocation();
 
-  const { name, gallery } = location.state;
+  const { gallery } = location.state;
 
-  console.log(gallery);
-
-  return <div>{name}</div>;
+  return (
+    <GalleryCtxProvider>
+      <ArtistGallery gallery={gallery} />
+    </GalleryCtxProvider>
+  );
 };
 
 export default Artist;

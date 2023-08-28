@@ -1,0 +1,40 @@
+import { useContext } from "react";
+import "./artist-gallery-item-modal.scss";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
+import { galleryCtx } from "../../../context/galleryCtx";
+
+const ArtistGalleryItemModal = ({ gallery }) => {
+  const { setModalOpen, currentIndex, handleGoForward, handleGoBackward } =
+    useContext(galleryCtx);
+
+  const handleCloseModal = (event) => {
+    console.log(event.target, event.currentTarget);
+    if (event.target === event.currentTarget) {
+      setModalOpen(false);
+    }
+    return;
+  };
+
+  return (
+    <div onClick={handleCloseModal} className="modal">
+      <div className="image">
+        <img src={gallery[currentIndex]} loading="lazy" alt="" />
+      </div>
+
+      <div
+        className={` ${currentIndex === 0 ? "arrows-first-item" : "arrows"}`}
+      >
+        {currentIndex > 0 && (
+          <SlArrowLeft size={30} onClick={handleGoBackward} className="arrow" />
+        )}
+        {currentIndex < gallery.length - 1 && (
+          <SlArrowRight size={30} onClick={handleGoForward} className="arrow" />
+        )}
+      </div>
+
+      <p onClick={() => setModalOpen(false)}>close</p>
+    </div>
+  );
+};
+
+export default ArtistGalleryItemModal;

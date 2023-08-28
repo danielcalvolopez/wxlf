@@ -8,7 +8,6 @@ const ArtistGalleryItemModal = ({ gallery }) => {
     useContext(galleryCtx);
 
   const handleCloseModal = (event) => {
-    console.log(event.target, event.currentTarget);
     if (event.target === event.currentTarget) {
       setModalOpen(false);
     }

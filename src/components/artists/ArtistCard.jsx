@@ -2,13 +2,9 @@ import { Link } from "react-router-dom";
 import "./artist-card.scss";
 import { BsArrowUpRight } from "react-icons/bs";
 
-const ArtistCard = ({ name, photo, info, slug, gallery }) => {
+const ArtistCard = ({ name, photo, info, slug }) => {
   return (
-    <Link
-      className="artist-card-container"
-      to={`/artists/${slug}`}
-      state={{ name, gallery }}
-    >
+    <Link className="artist-card-container" to={`/artists/${slug}`}>
       <div className="artist-card">
         <div className="title">
           <p>{name}</p>

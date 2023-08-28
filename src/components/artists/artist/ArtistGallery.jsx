@@ -11,7 +11,7 @@ const ArtistGallery = ({ gallery }) => {
     <>
       {modalOpen && <ArtistGalleryItemModal gallery={gallery} />}
       <div className="gallery">
-        {gallery.map((item, index) => (
+        {gallery?.map((item, index) => (
           <ArtistGalleryItem
             handleModal={() => handleModal(index)}
             key={item}

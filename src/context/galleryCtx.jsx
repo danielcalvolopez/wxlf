@@ -18,6 +18,7 @@ const GalleryCtxProvider = ({ children }) => {
     setModalOpen(true);
     setCurrentIndex(index);
   };
+
   const values = {
     currentIndex,
     setCurrentIndex,

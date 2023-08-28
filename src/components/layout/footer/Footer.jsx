@@ -1,3 +1,4 @@
+import Signature from "./Signature";
 import "./footer.scss";
 
 const Footer = () => {
@@ -8,12 +9,7 @@ const Footer = () => {
         <p>murcia</p>
         <p>tattoo studio</p>
       </div>
-      <p className="signature">
-        Designed & built by{" "}
-        <a target="_blank" href="https://www.danielcalvolopez.com/">
-          Daniel Calvo
-        </a>
-      </p>
+      <Signature />
     </div>
   );
 };

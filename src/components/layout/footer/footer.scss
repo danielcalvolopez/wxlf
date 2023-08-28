@@ -5,29 +5,8 @@
   font-family: "Roboto Mono", monospace;
   user-select: none;
   margin-top: 40px;
+  margin-bottom: 40px;
 
-  .signature {
-    text-align: center;
-    color: var(--yellow);
-    font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    @media only screen and (max-width: 450px) {
-      display: none;
-    }
-
-    @media only screen and (max-width: 600px) {
-      font-size: 14px;
-    }
-
-    a {
-      &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
-  }
   .bar {
     height: 1px;
     background-color: var(--yellow);

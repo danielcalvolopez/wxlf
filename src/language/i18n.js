@@ -35,6 +35,7 @@ const resources = {
       heroText:
         "Discover the range of our residents, from minimalism to realism, passing through fine line, japanese and aesthetic.",
       success: "Your message was succesfully sent!",
+      close: "close",
     },
   },
   es: {
@@ -71,6 +72,7 @@ const resources = {
       heroText:
         "Descubre la gama de nuestros residentes, desde el minimalismo al realismo, pasando por el trazo fino, japonés y estético.",
       success: "Tu mensaje se envió correctamente!",
+      close: "cerrar",
     },
   },
 };

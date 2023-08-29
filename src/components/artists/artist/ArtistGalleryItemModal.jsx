@@ -2,10 +2,13 @@ import { useContext } from "react";
 import "./artist-gallery-item-modal.scss";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { galleryCtx } from "../../../context/galleryCtx";
+import useTranslation from "../../../language/useTranslation";
 
 const ArtistGalleryItemModal = ({ gallery }) => {
   const { setModalOpen, currentIndex, handleGoForward, handleGoBackward } =
     useContext(galleryCtx);
+
+  const { translate } = useTranslation();
 
   const handleCloseModal = (event) => {
     if (event.target === event.currentTarget) {
@@ -31,7 +34,7 @@ const ArtistGalleryItemModal = ({ gallery }) => {
         )}
       </div>
 
-      <p onClick={() => setModalOpen(false)}>close</p>
+      <p onClick={() => setModalOpen(false)}>{translate("close")}</p>
     </div>
   );
 };

@@ -27,11 +27,19 @@
     h2 {
       text-transform: uppercase;
       font-weight: 300;
-      width: 80%;
+      width: 90%;
+
+      @media only screen and (max-width: 1300px) {
+        font-size: 60px;
+      }
 
       @media only screen and (max-width: 1200px) {
-        width: 80%;
+        width: 90%;
         font-size: 55px;
+      }
+
+      @media only screen and (max-width: 1020px) {
+        font-size: 50px;
       }
       @media only screen and (max-width: 900px) {
         font-size: 40px;
@@ -43,10 +51,10 @@
       font-family: "Roboto Mono", monospace;
       font-size: 19px;
       line-height: 150%;
-      width: 55%;
-      @media only screen and (max-width: 900px) {
+      width: 70%;
+      @media only screen and (max-width: 950px) {
         font-size: 18px;
-        width: 100%;
+        width: 90%;
       }
     }
   }

@@ -13,6 +13,7 @@ const Header = () => {
   );
 
   const { i18n, translate } = useTranslation();
+
   const handleChange = (value) => {
     setLanguage(value);
     localStorage.setItem("lang", value);

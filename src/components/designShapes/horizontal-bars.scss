@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   gap: 45px;
+  z-index: 0;
 
   @media only screen and (max-width: 900px) {
     display: none;

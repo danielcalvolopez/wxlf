@@ -1,10 +1,14 @@
-![](./public/main-logo.png)
+<p align="center">
+<img src="./public/main-logo.png" width="300"  />
+</p>
 
 The official website of WXLF, tattoo studio based in Murcia (Spain).
 
 Built with React (Vite) and hosted with Vercel.
 
-Dependencies:
+## **Dependencies**
+
+<hr/>
 
 - Emailjs (To receive messages from contact form directly to the email)
 - React Router Dom (Routing management)
@@ -13,11 +17,13 @@ Dependencies:
 - SASS (Styles)
 - React Icons (Self explanatory)
 
-DESKTOP // Home
+## **DESKTOP // Home**
 ![](./public/screenshots/desktop1.png)
 
-MOBILE // Home
+## **MOBILE // Home**
+
 ![](./public/screenshots/mobile-home.png)
 
-MOBILE // Artists
+## **MOBILE // Artists**
+
 ![](./public/screenshots/mobile-artists.png)

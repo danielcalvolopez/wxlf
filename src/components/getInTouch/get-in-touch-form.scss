@@ -4,6 +4,20 @@
   gap: 30px;
   width: 100%;
   order: 2;
+  .form-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span {
+      color: rgb(252, 76, 76);
+      font-family: "Roboto Mono", monospace;
+      font-size: 12px;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+  }
 
   .submit {
     display: flex;

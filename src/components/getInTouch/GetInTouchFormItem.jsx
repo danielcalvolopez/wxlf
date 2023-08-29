@@ -1,10 +1,14 @@
 import "./get-in-touch-form-item.scss";
 
-const GetInTouchFormItem = ({ title, type, message }) => {
+const GetInTouchFormItem = ({ title, type, message, register, required }) => {
   return (
     <div className="form-item">
       <label>{title}</label>
-      {message ? <textarea /> : <input type={type} />}
+      {message ? (
+        <textarea {...register(title, { required: required })} />
+      ) : (
+        <input {...register(title, { required: required })} type={type} />
+      )}
     </div>
   );
 };

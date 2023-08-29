@@ -9,13 +9,14 @@ const Artists = () => {
 
   return (
     <div className="artists-container">
-      {artists?.map(({ name, info, artistPhoto, slug }) => (
+      {artists?.map(({ name, info, infoSpanish, artistPhoto, slug }) => (
         <ArtistCard
           key={name}
           name={name}
           info={info}
           slug={slug}
           photo={artistPhoto}
+          infoSpanish={infoSpanish}
         />
       ))}
     </div>

@@ -1,10 +1,12 @@
+import useTranslation from "../../../language/useTranslation";
 import "./signature.scss";
 
 const Signature = () => {
+  const { translate } = useTranslation();
   return (
     <div className="signature-container">
       <p className="signature">
-        Designed & built by{" "}
+        {translate("signature")}{" "}
         <a target="_blank" href="https://www.danielcalvolopez.com/">
           Daniel Calvo
         </a>

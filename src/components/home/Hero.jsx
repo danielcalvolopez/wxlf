@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 import "./hero.scss";
+import useTranslation from "../../language/useTranslation";
 
 const Hero = () => {
+  const { translate } = useTranslation();
   return (
     <div className="hero">
       <div className="hero-text">
         <h2>
-          where <span>tattoos</span> meet fine <span>art</span>
+          <span>{translate("where")}</span>{" "}
+          <span className="color">tattoos </span>
+          <span>{translate("meetFine")} </span>
+          <span className="color">{translate("art")}</span>
         </h2>
-        <p>
-          Discover the range of our residents, from minimalism to realism,
-          passing through fine line, japanese and aesthetic.
-        </p>
+        <p>{translate("heroText")}</p>
         <Link to="artists">
-          <Button>explore</Button>
+          <Button>{translate("explore")}</Button>
         </Link>
       </div>
 

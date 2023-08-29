@@ -4,9 +4,20 @@ import Button from "../../UI/Button";
 import LangSelector from "../../UI/LangSelector";
 import MobileMenu from "../mobile/MobileMenu";
 import { useState } from "react";
+import useTranslation from "../../../language/useTranslation";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [language, setLanguage] = useState(
+    localStorage.getItem("lang") || "en"
+  );
+
+  const { i18n, translate } = useTranslation();
+  const handleChange = (value) => {
+    setLanguage(value);
+    localStorage.setItem("lang", value);
+    i18n.changeLanguage(value);
+  };
 
   const handleToggleMenu = () => {
     setToggle((prev) => !prev);
@@ -21,7 +32,7 @@ const Header = () => {
           }
           to="/"
         >
-          <span datatext="home">Home</span>
+          <span datatext={translate("home")}>{translate("home")}</span>
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -29,7 +40,7 @@ const Header = () => {
           }
           to="about-us"
         >
-          <span datatext="about us">About Us</span>
+          <span datatext={translate("aboutUs")}>{translate("aboutUs")}</span>
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -37,16 +48,20 @@ const Header = () => {
           }
           to="artists"
         >
-          <span datatext="artists">Artists</span>
+          <span datatext={translate("artists")}>{translate("artists")}</span>
         </NavLink>
 
-        <LangSelector />
+        <LangSelector
+          handleChange={handleChange}
+          setLanguage={setLanguage}
+          language={language}
+        />
 
         <NavLink
           className={({ isActive }) => (isActive ? "current-path" : "")}
           to="get-in-touch"
         >
-          <Button>get in touch</Button>
+          <Button>{translate("getInTouch")}</Button>
         </NavLink>
       </nav>
 
@@ -57,7 +72,14 @@ const Header = () => {
         alt=""
       />
 
-      {toggle && <MobileMenu handleToggleMenu={handleToggleMenu} />}
+      {toggle && (
+        <MobileMenu
+          handleChange={handleChange}
+          language={language}
+          setLanguage={setLanguage}
+          handleToggleMenu={handleToggleMenu}
+        />
+      )}
     </div>
   );
 };

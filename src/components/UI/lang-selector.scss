@@ -22,6 +22,9 @@
 
   .dropdown {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     top: 100%;
     left: -9%;
     color: black;
@@ -37,6 +40,10 @@
       align-items: center;
       gap: 6px;
       font-family: "Roboto Mono", monospace;
+
+      p {
+        width: 100%;
+      }
 
       .check {
         color: black;

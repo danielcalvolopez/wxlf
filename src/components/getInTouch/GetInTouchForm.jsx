@@ -3,12 +3,13 @@ import GetInTouchFormItem from "./GetInTouchFormItem";
 import "./get-in-touch-form.scss";
 import { useForm } from "react-hook-form";
 import MessageConfirmationModal from "./MessageConfirmationModal";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import useTranslation from "../../language/useTranslation";
 
 const GetInTouchForm = () => {
   const [confirmationModal, setConfirmationModal] = useState(false);
-  const form = useRef();
+  const { translate } = useTranslation();
 
   const {
     register,
@@ -25,25 +26,26 @@ const GetInTouchForm = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        (result) => {},
+        (error) => {}
       );
     reset();
     setConfirmationModal(true);
   };
 
+  const nameRequired = translate("requiredName");
+  const emailRequired = translate("requiredEmail");
+  const messageRequired = translate("requiredMessage");
+
   return (
-    <form ref={form} onSubmit={handleSubmit(onSubmit)} className="form">
+    <form onSubmit={handleSubmit(onSubmit)} className="form">
       <div className="form-item-wrapper">
         <GetInTouchFormItem
           register={register}
-          required="Name is required."
+          required={nameRequired}
           type="text"
-          title="Name"
+          title={translate("name")}
+          itemName="Name"
         />
         {errors.Name ? (
           <span>{errors.Name.message}</span>
@@ -53,10 +55,11 @@ const GetInTouchForm = () => {
       </div>
       <div className="form-item-wrapper">
         <GetInTouchFormItem
-          required="Email is required."
+          required={emailRequired}
           register={register}
           type="email"
           title="Email"
+          itemName="Email"
         />
         {errors.Email ? (
           <span>{errors.Email.message}</span>
@@ -66,10 +69,11 @@ const GetInTouchForm = () => {
       </div>
       <div className="form-item-wrapper">
         <GetInTouchFormItem
-          required="Message is required."
+          required={messageRequired}
           register={register}
           message
-          title="Message"
+          title={translate("message")}
+          itemName="Message"
         />
         {errors.Message ? (
           <span>{errors.Message.message}</span>
@@ -79,7 +83,7 @@ const GetInTouchForm = () => {
       </div>
 
       <div className="submit">
-        <Button btnClassName="yellow">submit</Button>
+        <Button btnClassName="yellow">{translate("submit")}</Button>
       </div>
       {confirmationModal && (
         <MessageConfirmationModal setConfirmationModal={setConfirmationModal} />

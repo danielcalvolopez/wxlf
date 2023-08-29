@@ -1,20 +1,21 @@
+import useTranslation from "../../language/useTranslation";
 import "./get-in-touch-slogan.scss";
 import { BsArrowReturnRight } from "react-icons/bs";
 
 const GetInTouchSlogan = () => {
+  const { translate } = useTranslation();
   return (
     <div className="slogan">
       <div className="content">
         <div className="title">
           <BsArrowReturnRight size={160} className="icon" />
           <h3>
-            you are in <span> good</span> hands
+            <span>{translate("youAre")}</span>{" "}
+            <span className="color"> {translate("good")}</span>{" "}
+            <span>{translate("hands")}</span>
           </h3>
         </div>
-        <p>
-          We are specialists in meeting client expectations. Let us know your
-          idea, and we will translate that into a piece of art on your skin.
-        </p>
+        <p>{translate("slogan")}</p>
       </div>
     </div>
   );

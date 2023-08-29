@@ -3,10 +3,12 @@ import GetInTouchFormItem from "./GetInTouchFormItem";
 import "./get-in-touch-form.scss";
 import { useForm } from "react-hook-form";
 import MessageConfirmationModal from "./MessageConfirmationModal";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const GetInTouchForm = () => {
   const [confirmationModal, setConfirmationModal] = useState(false);
+  const form = useRef();
 
   const {
     register,
@@ -15,13 +17,27 @@ const GetInTouchForm = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     reset();
     setConfirmationModal(true);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="form">
+    <form ref={form} onSubmit={handleSubmit(onSubmit)} className="form">
       <div className="form-item-wrapper">
         <GetInTouchFormItem
           register={register}

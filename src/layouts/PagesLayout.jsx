@@ -6,7 +6,7 @@ import useTranslation from "../language/useTranslation";
 
 const PagesLayout = () => {
   const location = useLocation();
-  const { translate } = useTranslation();
+  const { translate, i18n } = useTranslation();
 
   const [currentPath, setCurrentPath] = useState(undefined);
 
@@ -41,7 +41,7 @@ const PagesLayout = () => {
 
   useEffect(() => {
     getCurrentPath();
-  }, [location.pathname]);
+  }, [location.pathname, i18n.language]);
 
   return (
     <>

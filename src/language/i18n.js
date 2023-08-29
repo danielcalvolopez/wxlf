@@ -67,8 +67,8 @@ const resources = {
       message: "mensaje",
       submit: "enviar",
       where: "Donde los",
-      meetFine: "se unen con las",
-      art: "artes",
+      meetFine: "se unen con el",
+      art: "arte",
       heroText:
         "Descubre la gama de nuestros residentes, desde el minimalismo al realismo, pasando por el trazo fino, japonés y estético.",
       success: "Tu mensaje se envió correctamente!",

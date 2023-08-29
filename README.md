@@ -8,8 +8,6 @@ Built with React (Vite) and hosted with Vercel.
 
 ## **Dependencies**
 
-<hr/>
-
 - Emailjs (To receive messages from contact form directly to the email)
 - React Router Dom (Routing management)
 - React i18next (For multiple languages options)
@@ -17,7 +15,8 @@ Built with React (Vite) and hosted with Vercel.
 - SASS (Styles)
 - React Icons (Self explanatory)
 
-## **DESKTOP // Home**
+## **DESKTOP // Home**
+
 ![](./public/screenshots/desktop1.png)
 
 ## **MOBILE // Home**

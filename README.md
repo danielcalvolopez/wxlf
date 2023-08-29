@@ -21,8 +21,12 @@ Built with React (Vite) and hosted with Vercel.
 
 ## **MOBILE // Home**
 
-![](./public/screenshots/mobile-home.png)
+<p align="center">
+<img src="./public/screenshots/mobile-home.png" width="400"  />
+</p>
 
 ## **MOBILE // Artists**
 
-![](./public/screenshots/mobile-artists.png)
+<p align="center">
+<img src="./public/screenshots/mobile-artists.png" width="400"  />
+</p>

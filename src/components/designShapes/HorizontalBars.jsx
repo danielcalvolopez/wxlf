@@ -1,14 +1,19 @@
 import "./horizontal-bars.scss";
+import { motion } from "framer-motion";
+
+const bars = ["bar1", "bar2", "bar3", "bar4", "bar5", "bar6"];
 
 const HorizontalBars = () => {
   return (
     <div className="bars">
-      <span className="bar1" />
-      <span className="bar2" />
-      <span className="bar3" />
-      <span className="bar4" />
-      <span className="bar5" />
-      <span className="bar6" />
+      {bars.map((bar, index) => (
+        <motion.span
+          className={bar}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.2 }}
+        />
+      ))}
     </div>
   );
 };

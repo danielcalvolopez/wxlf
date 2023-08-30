@@ -12,6 +12,11 @@
   user-select: none;
   width: fit-content;
 
+  span {
+    display: flex;
+    height: 100%;
+  }
+
   &:hover {
     background-color: #ffff0021;
   }

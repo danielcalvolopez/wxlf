@@ -1,10 +1,16 @@
 import useTranslation from "../language/useTranslation";
 import "./about-us.scss";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   const { translate } = useTranslation();
   return (
-    <div className="about-us">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7 }}
+      className="about-us"
+    >
       <div className="image-wrapper">
         <img className="about-us-img" src="/photos/about-us.jpg" alt="" />
       </div>
@@ -13,7 +19,7 @@ const AboutUs = () => {
         <span className="color"> Murcia </span>
         <span>{translate("spain")}</span>
       </p>
-    </div>
+    </motion.div>
   );
 };
 

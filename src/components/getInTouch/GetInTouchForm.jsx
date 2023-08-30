@@ -6,6 +6,7 @@ import MessageConfirmationModal from "./MessageConfirmationModal";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import useTranslation from "../../language/useTranslation";
+import { AnimatePresence } from "framer-motion";
 
 const GetInTouchForm = () => {
   const [confirmationModal, setConfirmationModal] = useState(false);
@@ -85,9 +86,13 @@ const GetInTouchForm = () => {
       <div className="submit">
         <Button btnClassName="yellow">{translate("submit")}</Button>
       </div>
-      {confirmationModal && (
-        <MessageConfirmationModal setConfirmationModal={setConfirmationModal} />
-      )}
+      <AnimatePresence mode="wait">
+        {confirmationModal && (
+          <MessageConfirmationModal
+            setConfirmationModal={setConfirmationModal}
+          />
+        )}
+      </AnimatePresence>
     </form>
   );
 };

@@ -9,7 +9,7 @@ const Artists = () => {
 
   return (
     <div className="artists-container">
-      {artists?.map(({ name, info, infoSpanish, artistPhoto, slug }) => (
+      {artists?.map(({ name, info, infoSpanish, artistPhoto, slug }, index) => (
         <ArtistCard
           key={name}
           name={name}
@@ -17,6 +17,7 @@ const Artists = () => {
           slug={slug}
           photo={artistPhoto}
           infoSpanish={infoSpanish}
+          transition={{ duration: 0.3, delay: index * 0.2 }}
         />
       ))}
     </div>

@@ -5,6 +5,7 @@ import LangSelector from "../../UI/LangSelector";
 import MobileMenu from "../mobile/MobileMenu";
 import { useState } from "react";
 import useTranslation from "../../../language/useTranslation";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -72,15 +73,16 @@ const Header = () => {
         src="/burger.png"
         alt=""
       />
-
-      {toggle && (
-        <MobileMenu
-          handleChange={handleChange}
-          language={language}
-          setLanguage={setLanguage}
-          handleToggleMenu={handleToggleMenu}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {toggle && (
+          <MobileMenu
+            handleChange={handleChange}
+            language={language}
+            setLanguage={setLanguage}
+            handleToggleMenu={handleToggleMenu}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

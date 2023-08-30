@@ -4,6 +4,7 @@ import "./mobile-menu.scss";
 import { HiChevronDown, HiChevronUp, HiMiniCheck } from "react-icons/hi2";
 import { useState } from "react";
 import useTranslation from "../../../language/useTranslation";
+import { motion } from "framer-motion";
 
 const MobileMenu = ({
   handleToggleMenu,
@@ -28,7 +29,13 @@ const MobileMenu = ({
     <>
       <Backdrop onClick={handleToggleMenu} />
 
-      <div className="mobile-menu">
+      <motion.div
+        initial={{ opacity: 0, y: -400 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -400 }}
+        transition={{ duration: 0.4 }}
+        className="mobile-menu"
+      >
         <div onClick={handleToggleMenu} className="close">
           <img className="icon" src="/close.png" alt="" />
         </div>
@@ -89,7 +96,7 @@ const MobileMenu = ({
             )}
           </div>
         </nav>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -24,7 +24,7 @@ const Artists = () => {
 };
 
 export const artistsLoader = async () => {
-  const response = await fetch("/json/artists.json");
+  const response = await fetch("/src/utils/data/artists.json");
 
   return response.json();
 };

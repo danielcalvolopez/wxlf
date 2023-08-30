@@ -28,11 +28,6 @@
       text-transform: uppercase;
       font-weight: 300;
       width: 90%;
-      overflow: hidden;
-
-      span {
-        overflow: hidden;
-      }
 
       @media only screen and (max-width: 1300px) {
         font-size: 60px;

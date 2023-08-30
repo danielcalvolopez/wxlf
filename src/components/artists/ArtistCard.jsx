@@ -24,7 +24,7 @@ const ArtistCard = ({ name, photo, info, slug, infoSpanish, transition }) => {
             <BsArrowUpRight />
           </span>
         </div>
-        <img src={photo} alt={name} />
+        <img src={photo} alt={name} loading="lazy" />
         <p className="info">{currentLang === "en" ? info : infoSpanish}</p>
       </motion.div>
     </Link>

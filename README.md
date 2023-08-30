@@ -14,6 +14,7 @@ Built with React (Vite) and hosted with Vercel.
 - React Hook From (Form management)
 - SASS (Styles)
 - React Icons (Self explanatory)
+- Framer Motion (Animations)
 
 ## **DESKTOP // Home**
 

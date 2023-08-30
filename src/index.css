@@ -16,14 +16,14 @@ body {
   --black-transparent: #00000094;
   color: white;
 
-  background-image: url(assets/backgrounds/desktop/artists.png);
+  background-image: url(assets/backgrounds/desktop/artist.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
   @media only screen and (max-width: 450px) {
-    background-image: url(assets/backgrounds/desktop/get-in-touch.png);
+    background-image: none;
   }
 }
 

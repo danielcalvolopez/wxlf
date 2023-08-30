@@ -25,7 +25,12 @@ const Header = () => {
     setToggle((prev) => !prev);
   };
   return (
-    <div className="header-container">
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="header-container"
+    >
       <img src="/main-logo.png" alt="" />
       <nav className="nav-menu">
         <NavLink
@@ -83,7 +88,7 @@ const Header = () => {
           />
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 

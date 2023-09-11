@@ -8,6 +8,7 @@ const HorizontalBars = () => {
     <div className="bars">
       {bars.map((bar, index) => (
         <motion.span
+          key={bar}
           className={bar}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

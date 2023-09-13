@@ -1,7 +1,7 @@
 import useTranslation from "../../language/useTranslation";
 import "./message-confirmation-modal.scss";
 import { GrClose } from "react-icons/gr";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const MessageConfirmationModal = ({ setConfirmationModal }) => {
   const { translate } = useTranslation();
